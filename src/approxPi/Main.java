@@ -13,10 +13,10 @@ public class Main {
 	    String[] n = br.readLine().split(" ");   
 	    
 		final long start = System.nanoTime();
-		int points = Integer.parseInt(n[n.length-1]);
+		double points = Integer.parseInt(n[n.length-1]);
 		double pi_esti = 0;
-		float circle_r = 1;
-		int count_inside = 0;
+		double circle_r = 1;
+		double count_inside = 0;
 		
 		for(int i = 0; i < points;i++)  {
 			double x = ThreadLocalRandom.current().nextDouble();
