@@ -8,9 +8,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		double points = 0;
 		
-		if(args.length < 2)
-			points = Integer.parseInt(args[0]);
-		else points = Integer.parseInt(args[1]);
+		points = Integer.parseInt(args[0]);
 		
 		double circle_r = 1;
 		double count_inside = 0;
@@ -29,9 +27,7 @@ public class Main {
 		System.out.println("Total number of points: " + points);
 		System.out.println("Points within circle: " + count_inside);
 		System.out.println("Pi estimation: " + pi_esti);
-		System.out.println("Pi estimation: " + args.length);
 		
-	
 	}
 
 }
