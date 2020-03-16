@@ -1,5 +1,3 @@
-package approxPi;
-
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -8,7 +6,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		double points = 0;
 		
-		points = Integer.parseInt(args[0]);
+		points = Double.parseDouble(args[0]);
 		
 		double circle_r = 1;
 		double count_inside = 0;
