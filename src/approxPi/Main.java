@@ -1,14 +1,10 @@
-package approxPi;
-
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		
-		long start = System.currentTimeMillis();
-		
+				
 		double points = Double.parseDouble(args[0]);
 		int threads = Integer.parseInt(args[1]);
 
@@ -33,12 +29,9 @@ public class Main {
         
 		double pi_esti = count_inside_all/points * 4.0;
 		
-		long end = System.currentTimeMillis() - start;
-		
 		System.out.println("Total number of points: " + Integer.parseInt(args[0]));
 		System.out.println("Points within circle: " + count_inside_all);
 		System.out.println("Pi estimation: " + pi_esti);
-		System.out.println("Time: " + end + " ms");
 		
 	}
 
