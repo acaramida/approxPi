@@ -29,7 +29,7 @@ public class Main {
         
 		double pi_esti = count_inside_all/points * 4.0;
 		
-		System.out.println("Total number of points: " + Integer.parseInt(args[0]));
+		System.out.println("Total number of points: " + points);
 		System.out.println("Points within circle: " + count_inside_all);
 		System.out.println("Pi estimation: " + pi_esti);
 		
