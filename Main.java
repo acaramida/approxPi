@@ -26,13 +26,15 @@ public class Main {
 				e.printStackTrace();
 			}
         } 
-        
+        		
 		double pi_esti = count_inside_all/points * 4.0;
 		
+		double end = (double)(System.nanoTime()- start) * 1e-9;
+
 		System.out.println("Total number of points: " + points);
 		System.out.println("Points within circle: " + count_inside_all);
 		System.out.println("Pi estimation: " + pi_esti);
-		System.out.println("Execution time (s): " + (double)(System.nanoTime()- start)/1000000000.0);
+		System.out.printf("Execution time (s): %.3f \n", end);
 		
 	}
 
