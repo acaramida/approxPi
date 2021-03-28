@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-				
+		long start = System.nanoTime();
 		double points = Double.parseDouble(args[0]);
 		int threads = Integer.parseInt(args[1]);
 
@@ -32,6 +32,7 @@ public class Main {
 		System.out.println("Total number of points: " + points);
 		System.out.println("Points within circle: " + count_inside_all);
 		System.out.println("Pi estimation: " + pi_esti);
+		System.out.println("Execution time (s): " + (double)(System.nanoTime()- start)/1000000000.0);
 		
 	}
 
