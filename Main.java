@@ -44,12 +44,10 @@ class Multithreading extends Thread {
 	
 	double count_inside;
 	private double points;
-	private double circle_r;
 	
 	public Multithreading(double points) {
 		this.points = points;
 		count_inside = 0;
-		circle_r = 1;
 	}
 	
     public void run() 
@@ -60,9 +58,7 @@ class Multithreading extends Thread {
     			double x = ThreadLocalRandom.current().nextDouble();
     			double y = ThreadLocalRandom.current().nextDouble();
     			
-    			double cat_x = 1-x;
-    			double cat_y = 1-y;
-    			if(cat_x*cat_x + cat_y*cat_y <= circle_r*circle_r)
+    			if(x * x + y * y <= 1)
     				count_inside++;
     		}
   
