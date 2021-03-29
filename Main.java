@@ -5,17 +5,13 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		double points = Double.parseDouble(args[0]);
-		
-		double circle_r = 1;
 		double count_inside = 0;
 		
 		for(int i = 0; i < points;i++)  {
 			double x = ThreadLocalRandom.current().nextDouble();
 			double y = ThreadLocalRandom.current().nextDouble();
 			
-			double cat_x = 1-x;
-			double cat_y = 1-y;
-			if(cat_x*cat_x + cat_y*cat_y <= circle_r*circle_r)
+			if(x*x + y*y <= 1)
 				count_inside++;
 		}
 		
