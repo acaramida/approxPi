@@ -31,15 +31,15 @@ public class Main {
 
 		double pi_esti = count_inside_all / points * 4.0;
 
-		double end = (double) (System.nanoTime() - start) * 1e-9;
+		double time_taken = (double) (System.nanoTime() - start) * 1e-9;
 
 		if (flag == 1) {
-			System.out.printf("%.0f\t%d\t%.3f\n", points, threads, end);
+			System.out.printf("%.0f\t%d\t%.3f\n", points, threads, time_taken);
 		} else {
 			System.out.printf("Total number of points: %.1g\n", points);
 			System.out.println("Points within circle: " + count_inside_all);
 			System.out.println("Pi estimation: " + pi_esti);
-			System.out.printf("Execution time (s): %.3f \n", end);
+			System.out.printf("Execution time (s): %.3f \n", time_taken);
 		}
 
 	}
