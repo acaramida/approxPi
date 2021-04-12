@@ -36,7 +36,7 @@ public class Main {
 		if (flag == 1) {
 			System.out.printf("%.0f\t%d\t%.3f\n", points, threads, time_taken);
 		} else {
-			System.out.printf("Total number of points: %.1g\n", points);
+			System.out.printf("Total number of points: %.1g\n", (double)points);
 			System.out.println("Points within circle: " + count_inside_all);
 			System.out.println("Pi estimation: " + pi_esti);
 			System.out.printf("Execution time (s): %.3f \n", time_taken);
