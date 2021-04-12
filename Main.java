@@ -5,7 +5,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		long start = System.nanoTime();
-		double points = Double.parseDouble(args[0]);
+		long points = Long.parseLong(args[0]);
 		int threads = Integer.parseInt(args[1]);
 		int flag = 0;
 		if (args[args.length - 1].equalsIgnoreCase("-b")) {
@@ -49,16 +49,16 @@ public class Main {
 class Multithreading extends Thread {
 
 	double count_inside;
-	private double points;
+	private long points;
 
-	public Multithreading(double points) {
+	public Multithreading(long points) {
 		this.points = points;
 		count_inside = 0;
 	}
 
 	public void run() {
 		try {
-			for (int i = 0; i < points; i++) {
+			for (long i = 0; i < points; i++) {
 				double x = ThreadLocalRandom.current().nextDouble();
 				double y = ThreadLocalRandom.current().nextDouble();
 
